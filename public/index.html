@@ -1,0 +1,240 @@
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>T9 Dev</title>
+    <link rel="shortcut icon" href="sto....gif" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            color: white;
+            font-family: 'lato', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        body {
+            background-image: url(https://www.colorhexa.com/050a11.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+
+        .center .avatar img {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-top: 5%;
+            object-fit: cover;
+            object-position: 0 -8px;
+        }
+
+        .center {
+            width: 55%;
+            background-color: #0a0e15;
+            height: 60vh;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h1 {
+            color: wheat;
+        }
+
+        .content h2,
+        p {
+            font-weight: lighter;
+            letter-spacing: 1px;
+            width: 70%;
+            margin: 10px auto;
+        }
+
+        .content h2 {
+            font-weight: 400;
+        }
+
+        .content h3 {
+            margin-top: 20px;
+        }
+
+        div.social i {
+            padding: 0 10px;
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.4s;
+        }
+
+        div.social i:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center">
+        <div class="avatar">
+            <img src="sto....gif" alt="face">
+        </div>
+        <div class="content">
+            <h1 style="color: #ff4754"><i class="fas fa-code"></i> T9#9292</h1>
+            <p>Giovane Sviluppatore di bot (Javascript) e Youtuber (Nome canale: T9 Codes)</p>
+      
+        </div>
+        <div class="social">
+            <a href="https://discord.gg/nb2QQ2sAbH"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/channel/UC4c2D6nKSDKnj1PDxe8Z_zw/videos"><i class="fab fa-youtube"></i></a>
+            <a href="https://primebots.it"><i class="fas fa-robot"></i></i></a>
+        </div>
+    </div>
+
+
+ <footer>
+
+     <form action="#">
+<div id="form">
+<h1 style="color: ff4754"><a style="margin-left:18px">Vuoi contattarmi? Scrivi qua!</h1></a>
+
+   <label>
+      <i data-feather="hash"></i>
+      <input type="text" id="text" placeholder="Metti il nome prima del msg!" spellcheck="false" />
+    </label>
+
+ 
+<a href="https://t9dev.t9dev.repl.co/inviato.html" id="send" class="bottone">Invia ora!</a>
+<style>
+a.bottone{ 
+  font-weight: 700; 
+  color: white; 
+ 
+margin:20px; 
+  text-decoration: none; 
+  padding: .8em 1em calc(.8em + 3px); 
+  border-radius: 3px; 
+  background: #ff4754; 
+
+  transition: 0.2s; 
+} 
+a.button7:hover { background: rgb(53, 167, 110); } 
+a.button7:active { 
+  background: rgb(33,147,90); 
+  box-shadow: 0 3px rgb(33,147,90) inset; 
+}
+</style>
+
+<script> 
+  function blocco_mousedx()
+   { return(false); }
+  document.oncontextmenu = blocco_mousedx;
+</script>
+
+<script> <!-- blocco scorciatoie da tastiera -->
+ document.onkeydown = function(blocco_tasti) {
+  if(event.keyCode == 123) 
+{ return false; }
+  if(blocco_tasti.ctrlKey && blocco_tasti.shiftKey && blocco_tasti.keyCode == 'I'.charCodeAt(0)) { return false; }
+  if(blocco_tasti.ctrlKey && blocco_tasti.shiftKey && blocco_tasti.keyCode == 'C'.charCodeAt(0)) { return false; }
+  if(blocco_tasti.ctrlKey && blocco_tasti.shiftKey && blocco_tasti.keyCode == 'J'.charCodeAt(0)) { return false; }
+  if(blocco_tasti.ctrlKey && blocco_tasti.keyCode == 'U'.charCodeAt(0)) 
+{ return false; } 
+}
+</script>
+
+    <script>
+        document.getElementById('send').addEventListener('click', (e) => {
+          
+            let text = document.getElementById('text').value;
+            fetch('/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    content: text
+                })
+            })
+        })
+    </script>
+
+        </footer>
+    </pl>
+ 
+    
+   
+    
+      <style>
+      html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050a11;
+}
+
+label {
+  position: relative;
+}
+
+label svg {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  color: #393838;
+  transition: color 0.2s;
+  left: 1rem;
+}
+
+label:focus-within svg {
+  color: #f5f8ff;
+}
+
+label input {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #f5f8ff;
+
+  background: rgba(245, 248, 255, 0.025);
+  padding: 1rem 1.4rem 1rem 3.2rem;
+  min-width: 12rem;
+
+  outline: none;
+  border: 0.15rem solid transparent;
+  border-radius: 0.4rem;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+label:hover input {
+  border-color: rgba(245, 248, 255, 0.02);
+}
+
+label input::placeholder {
+  color: #393838;
+  user-select: none;
+}
+
+label input:focus {
+  border-color: #ff4754;
+  box-shadow: 0 0 0 0.4rem rgba(255, 71, 81, 0.15);
+}
+  </style>
+</body></html>
